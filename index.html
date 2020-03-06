@@ -133,6 +133,62 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-05T23:57:55.000Z">2020-03-06</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 305 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/06/ThinkingTraining/DataStructuresAndAlgorithms/">数据结构与算法</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote>
+<p>转载于 Mosh Hamedani</p>
+</blockquote>
+<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="大写-O-标记（Big-O-Notation）"><a href="#大写-O-标记（Big-O-Notation）" class="headerlink" title="大写 O 标记（Big O Notation）"></a>大写 O 标记（Big O Notation）</h2><h3 id="什么是-大写-O-？"><a href="#什么是-大写-O-？" class="headerlink" title="什么是 大写 O ？"></a>什么是 大写 O ？</h3><blockquote>
+<p>Big O notation is a mathematical notation that</p>
+<p>describes the limiting behavior of a function when the</p>
+<p>argument tends towards a particular value or infinity.</p>
+<p>by wikipedia</p>
+</blockquote>
+<blockquote>
+<p>从维基百科的定义来看，大写 O 标记是一个数学标记，描述了函数限制性行为，当参数的趋势是向特定值或者无限时。</p>
+</blockquote>
+<p>我们用 O 来表示一个算法的性能，这告诉我们给定的算法性能是否时可以测量的。</p>
+<h3 id="n-1"><a href="#n-1" class="headerlink" title="n(1)"></a>n(1)</h3><p>以 Java 为例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">log</span><span class="params">(intp[] numbers)</span></span>&#123;</span><br><span class="line">        <span class="comment">// O(1)</span></span><br><span class="line">        <span class="comment">// 执行着固定时间</span></span><br><span class="line">        System.out.println(numbers[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// O(n)</span></span><br><span class="line">        <span class="comment">// n 表示输入的大小，当输入增大时，算法的消耗也会线性的跟着增大</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numbers.length; i++)</span><br><span class="line">            System.out.println(numbers[i]);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">// O(2 + n)</span></span><br><span class="line">        <span class="comment">// 此时的方法运行复杂度为 1+n+1 可 简化为 2+n</span></span><br><span class="line">        <span class="comment">// 算法的消耗增长仍然是线性的，我们可以丢掉常数的方法来简化标记 O(n)</span></span><br><span class="line">        System.out.println();   <span class="comment">// O(1)</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> number : numbers)   <span class="comment">// O(n)</span></span><br><span class="line">            System.out.println(number);</span><br><span class="line">        System.out.println();   <span class="comment">// O(1)</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// O(2n)</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> number : numbers)   <span class="comment">// O(n)</span></span><br><span class="line">            System.out.println(number);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> number : numbers)   <span class="comment">// O(n)</span></span><br><span class="line">            System.out.println(number);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-03-04T13:41:06.000Z">2020-03-04</time>
                 
                 
@@ -12863,7 +12919,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            9
+                            10
                         </p>
                     </a>
                 </div>
@@ -13008,6 +13064,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/06/ThinkingTraining/DataStructuresAndAlgorithms/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据结构与算法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-05T23:57:55.000Z">2020-03-06</time></div>
+                    <a href="/2020/03/06/ThinkingTraining/DataStructuresAndAlgorithms/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据结构与算法</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/04/vuejs/Getting-Started/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Getting-Started">
@@ -13082,25 +13157,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/29/english/English-Categories/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="English-Categories">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:23:14.000Z">2020-02-29</time></div>
-                    <a href="/2020/02/29/english/English-Categories/" class="title has-link-black-ter is-size-6 has-text-weight-normal">English-Categories</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
         
@@ -13118,7 +13174,7 @@
                     <span class="level-item">March 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -13171,6 +13227,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/06/ThinkingTraining/DataStructuresAndAlgorithms/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="数据结构与算法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-05T23:57:55.000Z">2020-03-06</time></div>
+                    <a href="/2020/03/06/ThinkingTraining/DataStructuresAndAlgorithms/" class="title has-link-black-ter is-size-6 has-text-weight-normal">数据结构与算法</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/04/vuejs/Getting-Started/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="Getting-Started">
@@ -13245,25 +13320,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/02/29/english/English-Categories/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="English-Categories">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-02-29T13:23:14.000Z">2020-02-29</time></div>
-                    <a href="/2020/02/29/english/English-Categories/" class="title has-link-black-ter is-size-6 has-text-weight-normal">English-Categories</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
     
@@ -13281,7 +13337,7 @@
                     <span class="level-item">March 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
